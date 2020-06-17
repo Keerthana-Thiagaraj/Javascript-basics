@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>
+        Welcome beginner
+    </title>
+
+    <script>
+
+        function setNewImage(){
+
+            document.getElementById("imageId").src="0.png"
+         
+        }
+
+        function setOldImage(){
+            document.getElementById("imageId").src="main.jpg" 
+        }
+
+    </script>
+</head>
+
+<body>
+ 
+    <img id="imageId" onmouseover="setNewImage()" onmouseout="setOldImage()" src="main.jpg"></img>
+<br>
+
+
+</body>
+
+</html>

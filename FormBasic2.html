@@ -1,0 +1,47 @@
+<html>
+<!--Highliting the fields whichever is empty-->
+<head>
+    <title>
+        Welcome beginner
+    </title>
+
+    <script>
+
+        function f2(){
+
+            var user=document.getElementById("uid")
+            var pass=document.getElementById("pid")
+
+            if(user.value.trim()==""){
+             
+                user.style.border="solid 3px red"
+                document.getElementById("lid").style.visibility="visible"
+                return false
+            }else if(pass.value.trim()==""){
+
+                return false
+            }else
+                return true
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <!--On submission, the form is validating the fields and navigates to next page-->
+    
+    <form onsubmit=" return f2()"  action="message.html">
+        <input id="uid" type="text" placeholder="Enter username"/>
+        <label id ="lid" style="color: aqua; visibility: hidden;">Please enter a value</label>
+        <br>
+        <br>
+        <input id="pid" type="password" placeholder="Enter password"/>
+        <br>
+        <br>
+        <button id="btn"  type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

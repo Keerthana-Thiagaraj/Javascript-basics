@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>
+        Welcome beginner
+    </title>
+
+    <script>
+
+        function f2(){
+
+            var username=document.getElementById("uid")
+            var re=/T01/i
+            if(re.test(username.value))
+            {
+                alert("valid user")
+                document.getElementById("lid").style.visibility="invisible"
+                return true
+            }else
+            {
+                alert("invalid user")
+                document.getElementById("lid").style.visibility="visible"
+                false
+            } 
+        }
+
+    </script>
+</head>
+
+<body>
+    
+    <form >
+        <input id="uid" type="text" placeholder="Enter username"/>
+        <label id ="lid" style="color: aqua; visibility: hidden;">Please enter a value</label>
+        <br>
+        <br>
+        <button id="btn" onclick="f2()" type="button">Submit</button>
+    </form>
+</body>
+
+</html>
